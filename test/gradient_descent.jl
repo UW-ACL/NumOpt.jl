@@ -1,4 +1,4 @@
-using LinearAlgebra
+using NumOpt, LinearAlgebra
 
 n = 4
 
