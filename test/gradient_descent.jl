@@ -9,6 +9,6 @@ f(x) = (x .- a) .^ 4
 
 x0 = randn(n)
 
-α = 0.1
+α = 1.0
 ϵ = 1e-5
 xopt = gradient_descent(x0,∇f,α,ϵ)
