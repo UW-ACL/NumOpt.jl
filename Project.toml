@@ -2,3 +2,7 @@ name = "NumOpt"
 uuid = "673a5f2c-9da6-49ff-98a4-c48f6865da3d"
 authors = ["Purnanand Elango <purnanandelango@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
