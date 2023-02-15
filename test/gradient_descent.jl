@@ -1,14 +1,13 @@
-using NumOpt, LinearAlgebra
+using LinearAlgebra
 
 n = 4
 
 a = randn(n)
-
-f(x) = (x .- a) .^ 4
+f(x) = sum((x .- a) .^ 4)
 ∇f(x) = 4 .* ((x .- a) .^ 3)
 
 x0 = randn(n)
 
-α = 1.0
-ϵ = 1e-5
+α = 0.1
+ϵ = 1e-9
 xopt = gradient_descent(x0,∇f,α,ϵ)
