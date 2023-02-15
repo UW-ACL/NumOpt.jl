@@ -1,4 +1,5 @@
 module NumOpt
+using LinearAlgebra
 
 export gradient_descent
 

@@ -3,7 +3,6 @@ using NumOpt, LinearAlgebra
 n = 4
 
 a = randn(n)
-b = randn(n)
 
 f(x) = (x .- a) .^ 4 .+ b 
 ∇f(x) = 4 .* (x .- a) .^ 3
