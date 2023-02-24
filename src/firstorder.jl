@@ -1,9 +1,10 @@
-function gradient_descent(x0,∇f::Function,α,ϵ)
-    xk = deepcopy(x0) .+ 100.0
-    xkp1 = deepcopy(x0) 
-    while norm(xkp1 .- xk) ≥ ϵ
-        xk .= xkp1        
-        xkp1 .= xk .- α .* ∇f(xk)
+function gradient_descent(f::Function,∇f::Function,x0,ϵ::Float64)
+    xk = deepcopy(x0)
+    while norm(∇f(xk)) ≥ ϵ
+        ∇fk = ∇f(xk)
+        pk = - ∇fk
+        α = backtracking_ls(f, xk, ∇fk, pk)
+        xk .= xk .+ α .* pk
     end
-    return xkp1
+    return xk
 end
